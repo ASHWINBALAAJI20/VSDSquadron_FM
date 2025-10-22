@@ -116,7 +116,7 @@ Verification is performed using a serial terminal application like **Docklight**
 ![](https://github.com/ASHWINBALAAJI20/VSDSquadron_FM/blob/main/Task%202%20-%20UART%20Loopback/Board.jpeg)
 
 
-[![Video of the UART loopback demonstration](https://github.com/ASHWINBALAAJI20/VSDSquadron_FM/blob/main/Task%202%20-%20UART%20Loopback/Output.webm)]()
+[![Video of the UART loopback demonstration in Output.webm](https://github.com/ASHWINBALAAJI20/VSDSquadron_FM/blob/main/Task%202%20-%20UART%20Loopback/Output.webm)](https://github.com/ASHWINBALAAJI20/VSDSquadron_FM/blob/main/Task%202%20-%20UART%20Loopback/Output.webm)
 
 ### Verification Result
 
