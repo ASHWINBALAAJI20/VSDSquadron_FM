@@ -1,4 +1,4 @@
-# 💡 VSDSquadron FPGA Mini – Blue LED Blink Project
+# 💡 VSDSquadron FPGA Mini – Blue LED Project
 
 ## 📘 Project Overview
 This project demonstrates how to blink the **blue LED** on the **RGB LED** of the **VSDSquadron FPGA Mini (FM)** board using **Verilog HDL**.  
