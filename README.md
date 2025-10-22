@@ -1,83 +1,82 @@
-# 💡 VSDSquadron FPGA Mini – Blue LED Project
+# ⚙️ VSDSquadron FPGA Mini (FM) Board
 
-## 📘 Project Overview
-This project demonstrates how to blink the **blue LED** on the **RGB LED** of the **VSDSquadron FPGA Mini (FM)** board using **Verilog HDL**.  
-It includes understanding the Verilog code, creating the **PCF (Physical Constraint File)**, integrating it with the FPGA Mini board, and successfully programming the FPGA using open-source tools.
+### 🏷️ Developed by [VLSI System Design (VSD)](https://www.vlsisystemdesign.com/)
+
+![Alt text](https://github.com/ASHWINBALAAJI20/VSDSquadron_FM/blob/main/vsd%20image.jpg)
+
+
+The **VSDSquadron FPGA Mini (FM)** board is a **compact, low-cost FPGA prototyping platform** that integrates an onboard programmer, SPI flash, RGB LED, and easily accessible GPIO pins — enabling rapid FPGA design and experimentation.
+
+---
+![Alt text](https://github.com/ASHWINBALAAJI20/VSDSquadron_FM/blob/main/VSDSquadron%20FPGA%20Mini%20Front.jpg)
+
+
+## 🧠 Overview
+
+The VSDSquadron FM board provides a hands-on, open-source environment for learning and implementing FPGA-based designs.  
+It is powered by the **Lattice UltraPlus ICE40UP5K FPGA**, known for low power, flexible I/O, and high-density logic cells.
+
+### 🔹 Key Features
+
+- **FPGA:** Lattice iCE40UP5K-SG48ITR  
+  - 5.3K LUTs, 1Mb SPRAM, 120Kb DPRAM  
+  - 8 multipliers for DSP applications  
+- **Connectivity:** FTDI FT232H USB-to-SPI for communication and programming  
+- **GPIO:** 32 accessible FPGA I/O pins for easy prototyping  
+- **Memory:** 4 MB SPI Flash for configuration and data storage  
+- **LEDs:** Onboard RGB LED for status indication or custom logic output  
+- **Form Factor:** 57 mm × 29 mm board size, lightweight and portable  
+- **Power:** Integrated 3.3 V / 1.2 V regulators with external 3.3 V supply option  
 
 ---
 
-## 🧩 Step 1: Understanding the Verilog Code
-**Verilog Source:** [`top.v`](https://github.com/thesourcerer8/VSDSquadron_FM/blob/main/led_blue/top.v)
+## 📦 Kit Contents
 
-### 🔍 Module Overview
-| Signal | Direction | Description |
-|:--------|:-----------|:-------------|
-| `led_red`, `led_blue`, `led_green` | Output | Control RGB LED colors |
-| `hw_clk` | Input | Hardware oscillator clock input |
-| `testwire` | Output | Test signal connected to frequency counter bit 5 |
-
-### 🧠 Internal Component Analysis
-#### 1. Internal Oscillator (`SB_HFOSC`)
-Generates the internal clock signal used by the frequency counter.  
-**Control Signals:**
-- `CLKHFPU = 1'b1` → Power up oscillator  
-- `CLKHFEN = 1'b1` → Enable oscillator  
-- Output: `CLKHF` → Connected to internal logic  
-
-#### 2. Frequency Counter
-- Implemented as a **27-bit register** (`reg [26:0] counter`).  
-- Increments on every positive edge of the internal oscillator (`int_osc`).  
-- **Bit 5** is routed to `testwire` for monitoring.
-
-#### 3. RGB LED Driver (`SB_RGBA_DRV`)
-Manages the RGB LED brightness and color output.  
-- Enables LED operation: `RGBLEDEN = 1'b1`
-- Sets brightness:
-  - `RGB0PWM = 1'b0` → Red LED off  
-  - `RGB1PWM = 1'b0` → Green LED off  
-  - `RGB2PWM = 1'b1` → Blue LED on (maximum brightness)  
-- Current settings: `CURREN = 0b000001` for equal current distribution.
-
-### 🎯 Purpose of the Code
-This Verilog module drives the **blue LED** of the onboard RGB LED at full brightness using an internal oscillator and counter logic.  
-It demonstrates basic control of FPGA I/O and internal clock usage.
+| Item | Quantity | Description |
+|:------|:-----------:|:------------|
+| VSDSquadron FPGA Mini (FM) board | 1 | Board with ICE40UP5K FPGA, RGB LED, SPI Flash, and onboard power regulation |
 
 ---
 
-## 📄 Step 2: Creating the PCF File
-**PCF Source:** [`VSDSquadronFM.pcf`](https://github.com/thesourcerer8/VSDSquadron_FM/blob/main/led_blue/VSDSquadronFM.pcf)
+## 📊 Technical Specifications
 
-### 🔌 Pin Assignments
-| Signal | Pin | Description |
-|:--------|:----|:-------------|
-| `led_red` | 39 | Controls red LED pin |
-| `led_blue` | 40 | Controls blue LED pin |
-| `led_green` | 41 | Controls green LED pin |
-| `hw_clk` | 20 | Hardware clock input |
-| `testwire` | 17 | Test signal output |
-
-Each mapping ensures correct connection between the logical Verilog signals and the physical FPGA board pins.
+| Feature | Specification |
+|:--------|:---------------|
+| Technology Node | 40 nm |
+| Logic Cells | 5,280 |
+| Flip-Flops | 4,960 |
+| SRAM Blocks | 120 Kb |
+| I/O Pins | 39 |
+| Core Voltage | 1.2 V |
+| I/O Voltage | 3.3 V / 2.5 V / 1.8 V |
+| Max Frequency | 133 MHz |
+| Operating Temp | 20 °C – 35 °C (Room temperature) |
+| Tools Supported | Yosys · NextPNR · Project IceStorm |
 
 ---
 
-## ⚙️ Step 3: Integration with VSDSquadron FPGA Mini Board
-Refer to the **VSDSquadron FPGA Mini board datasheet** for details on features, pinout, and programming procedures.
+## 💻 Software Installation (Windows)
 
-### 🧭 Setup Steps
-1. **Connect** the FPGA Mini board to your computer via USB-C.  
-   - Check connection with:  
-     ```bash
-     lsusb
-     ```
-     Look for *“Future Technology Devices International”* to confirm FTDI detection.
+To run and program FPGA projects, the datasheet recommends setting up a **Linux virtual environment** via **Oracle VirtualBox**.
 
-2. **Prepare Files:**
-   - `top.v`
-   - `VSDSquadronFM.pcf`
-   - `Makefile` ([Link](https://github.com/thesourcerer8/VSDSquadron_FM/blob/main/led_blue/Makefile))
+### Installation Summary
+1. Ensure at least **100 GB free disk space**.
+2. **Download the VSDSquadron FPGA Mini Software Bundle**  
+   [vsdsquadron_fpga_mini.zip](https://vsd-labs.sgp1.cdn.digitaloceanspaces.com/vsd-labs/vsdsquadron_fpga_mini.zip)
+3. Install **Oracle VirtualBox** from [virtualbox.org](https://www.virtualbox.org/wiki/Downloads)
+4. Create a new virtual machine:
+   - OS Type: Linux  |  Version: Xubuntu 64-bit  
+   - RAM: 4 GB  |  CPU Cores: 4
+5. Use the provided **VDI file** as the existing virtual hard disk.
+6. Log in with password `vsdiat`.
 
-3. **Build & Flash Commands:**
-   ```bash
-   make clean       # Clear old builds
-   make build       # Compile the design
-   sudo make flash  # Program the FPGA
+---
+## 🙏 Acknowledgment
+
+A heartfelt thank-you to **[Kunal Ghosh](https://www.linkedin.com/in/kunal-ghosh-vlsisystemdesign-com-28084836/)** — founder of **VLSI System Design (VSD)** — for his leadership in promoting open-source hardware education.  
+
+His efforts in building the **VSDSquadron ecosystem** and making **FPGA learning accessible** continue to empower students, educators, and engineers worldwide.  
+
+**Thank you, Kunal,** for inspiring a new generation of open-source silicon designers.
+
+
