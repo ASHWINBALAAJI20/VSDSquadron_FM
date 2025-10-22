@@ -82,3 +82,8 @@ Refer to the **VSDSquadron FPGA Mini board datasheet** for details on features, 
    make build       # Compile the design
    sudo make flash  # Program the FPGA
 
+![Alt text](https://github.com/ASHWINBALAAJI20/VSDSquadron_FM/blob/main/Task%201%20-%20Led%20Blue/Terminal.jpg)
+
+![Alt text](https://github.com/ASHWINBALAAJI20/VSDSquadron_FM/blob/main/Task%201%20-%20Led%20Blue/Board%20.jpg)
+
+
