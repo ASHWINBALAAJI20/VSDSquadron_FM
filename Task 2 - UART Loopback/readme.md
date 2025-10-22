@@ -66,14 +66,14 @@ This diagram illustrates the logical path of the loopback data.
 
 
 
-[Image of UART Loopback block diagram]
+![](https://github.com/ASHWINBALAAJI20/VSDSquadron_FM/blob/main/Task%202%20-%20UART%20Loopback/Uart%20diagram.png)
 
 
 ### Detailed Circuit Diagram
 
 This diagram shows the connection between the internal FPGA module and the external peripherals/pins.
 
-
+![](https://github.com/ASHWINBALAAJI20/VSDSquadron_FM/blob/main/Task%202%20-%20UART%20Loopback/circuit_diagram.png)
 
 ---
 
@@ -99,6 +99,8 @@ To implement the code on the **VSDSquadron FPGA Mini**, ensure the project folde
     ```
 The code is now implemented on the FM board.
 
+![](https://github.com/ASHWINBALAAJI20/VSDSquadron_FM/blob/main/Task%202%20-%20UART%20Loopback/Terminal.png)
+
 ---
 
 ## ✅ Step 4: Testing and Verification
@@ -111,6 +113,11 @@ Verification is performed using a serial terminal application like **Docklight**
 2.  **Send Data:** Enter the desired test command/sequence in the send box (e.g., in Docklight's "Send Sequences").
 3.  **Execute:** Trigger the sequence transmission.
 
+![](https://github.com/ASHWINBALAAJI20/VSDSquadron_FM/blob/main/Task%202%20-%20UART%20Loopback/Board.jpeg)
+
+
+[![Video of the UART loopback demonstration](https://github.com/ASHWINBALAAJI20/VSDSquadron_FM/blob/main/Task%202%20-%20UART%20Loopback/Output.webm)]()
+
 ### Verification Result
 
 The terminal should immediately display the **exact same data** in the receive window that was just transmitted. This confirms the successful operation of the loopback mechanism: data transmitted from the PC reaches the FPGA's `uartrx` pin and is instantly echoed back out on the `uarttx` pin.
@@ -119,6 +126,3 @@ The terminal should immediately display the **exact same data** in the receive w
 
 ---
 
-## 📹 Step 5: Final Documentation
-
-A short video demonstrating the UART loopback functionality, showing the transmission of a sequence and the immediate receipt of the same sequence in the serial terminal, will be recorded to complete the documentation.
