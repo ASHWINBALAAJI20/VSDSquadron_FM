@@ -60,14 +60,14 @@ The **RGB LEDs** are used for visual debugging and indication, controlled by cou
 ### 🧱 Block Diagram
 The block diagram shows the internal structure of the **UART Transmitter system**.
 
-![](https://github.com/ASHWINBALAAJI20/VSDSquadron_FM/blob/main/Task%202%20-%20UART%20Loopback/Uart%20diagram.png)
+![](https://github.com/ASHWINBALAAJI20/VSDSquadron_FM/blob/main/Task%203%20-%20UART%20Transmitter/Block%20Diagram.png)
 
 ---
 
 ### ⚡ Circuit Diagram
 The circuit diagram below shows how the **UART TX pin** of the FPGA is connected to a **PC’s RX pin** through a **USB-to-UART converter (FTDI)**.
 
-![](https://github.com/ASHWINBALAAJI20/VSDSquadron_FM/blob/main/Task%202%20-%20UART%20Loopback/Uart%20diagram.png)
+![](https://github.com/ASHWINBALAAJI20/VSDSquadron_FM/blob/main/Task%203%20-%20UART%20Transmitter/circuit%20diagram.png)
 
 ---
 
@@ -155,5 +155,7 @@ You should immediately see the continuous stream of the character **'D'**.
     sudo make terminal
     ```
     This command will automatically open the serial terminal and display the stream of **'D'** characters.
+
+    
 
 
