@@ -77,6 +77,6 @@ A heartfelt thank-you to **[Kunal Ghosh](https://www.linkedin.com/in/kunal-ghosh
 
 His efforts in building the **VSDSquadron ecosystem** and making **FPGA learning accessible** continue to empower students, educators, and engineers worldwide.  
 
-**Thank you, Kunal,** for inspiring a new generation of open-source silicon designers.
+**Thank you, Kunal Sir,** for inspiring a new generation of open-source silicon designers.
 
 
