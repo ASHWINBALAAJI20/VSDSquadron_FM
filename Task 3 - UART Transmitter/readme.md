@@ -137,7 +137,7 @@ You can use a serial terminal program like **PuTTY** (Windows) or **picocom** (L
 
 You should immediately see the continuous stream of the character **'D'**.
 
-[![Video of the UART Transmitter putty demonstration in putty.webm](https://github.com/ASHWINBALAAJI20/VSDSquadron_FM/blob/main/Task%203%20-%20UART%20Transmitter/putty.webm)
+[![Video of the UART Transmitter putty demonstration in putty.webm](https://github.com/ASHWINBALAAJI20/VSDSquadron_FM/blob/main/Task%203%20-%20UART%20Transmitter/putty.mp4)
 
 ### 🐧 Using Picocom (Ubuntu/Linux)
 
@@ -163,6 +163,6 @@ You should immediately see the continuous stream of the character **'D'**.
 
 
 
-[![Video of the UART Transmitter board in Board.webm](https://github.com/ASHWINBALAAJI20/VSDSquadron_FM/blob/main/Task%203%20-%20UART%20Transmitter/Board.webm)
+[![Video of the UART Transmitter board in Board.webm](https://github.com/ASHWINBALAAJI20/VSDSquadron_FM/blob/main/Task%203%20-%20UART%20Transmitter/Board.mp4)
 
 
