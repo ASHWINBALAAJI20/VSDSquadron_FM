@@ -161,7 +161,7 @@ You should immediately see the continuous stream of the character **'D'**.
     This command will automatically open the serial terminal and display the stream of **'D'** characters.
 
 
---
+
 
 [![Video of the UART Transmitter board in Board.webm](https://github.com/ASHWINBALAAJI20/VSDSquadron_FM/blob/main/Task%203%20-%20UART%20Transmitter/Board.webm)
 
